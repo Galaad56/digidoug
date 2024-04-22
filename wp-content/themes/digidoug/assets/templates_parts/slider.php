@@ -1,27 +1,42 @@
 <section class="home-section" id="section-real">
-    <h2>Mes réalisations</h2>
+    <h2>REALISATIONS</h2>
     
     <div class="slider">
-        <?php
-        $projet = new WP_Query(array(
-            'post_type' => 'projet',
-            'posts_per_page' => 1,
-            'orderby' => 'rand',
-        ));
-        if ($projet->have_posts()) : 
-            while ($projet->have_posts()) : $projet->the_post();
-                the_post_thumbnail('full');
-                $currentPostID = get_the_ID(); // Récupérez l'ID du post courant
-                echo "le numero du post est " . $currentPostID;
-            endwhile;
-            wp_reset_postdata();
-        endif;
-        ?>
+    <?php
+                    $args = array(
+                        'post_type' => 'projet',
+                        'posts_per_page' => 4,
 
-        <div class="arrow_container">
-            <img class="arrow" id="prev" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/arrow_left.png'; ?>" alt="Précédent">
-            <img class="arrow" id="next" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/arrow_right.png'; ?>" alt="Suivant">
-        </div>
+                    );
+                    $projet_query = new WP_Query($args);
+                    
+
+        // Boucle WordPress pour récupérer les données du custom post type
+        if ($projet_query->have_posts()) :
+            while ($projet_query->have_posts()) : $projet_query->the_post(); 
+
+        // Récupérer les métadonnées
+                $theme_projet = get_post_meta(get_the_ID(), 'theme_projet', true);
+                $description_projet = get_post_meta(get_the_ID(), 'description_projet', true);
+
+    ?>
+            <div class="projet-content">
+                <?php $nom_projet = get_the_title(); ?>
+                <?php the_post_thumbnail('full', [
+                    'class' => 'img-projet',
+                    'data-nom-projet' => esc_attr($nom_projet),
+                    'data-theme-projet' => esc_attr($theme_projet),
+                    'data-description-projet' => esc_attr($description_projet)
+                ]); ?>
+            </div>
+                        
+            <?php endwhile;
+        endif;?>
+
     </div>
          
 </section>
+<!-- Fenêtre modale -->
+<div class="modal" id="projet-modal">
+    <div class="modal-content"></div>
+</div>

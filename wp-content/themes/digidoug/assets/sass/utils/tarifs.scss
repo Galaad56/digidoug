@@ -1,0 +1,132 @@
+.section-tarifs{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarifs-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+
+}
+
+.tarifs-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    height: 750px;
+    background-color: var(--couleur-body2);
+    text-align: center;
+    font-family: Arial;
+    transition: background-color 0.6s ease-in-out; 
+}
+
+.tarifs-item:hover{
+    background-color: var(--couleur-body3);
+}
+
+
+.separator{
+    width: 50px; /* Largeur de la ligne */
+    height: 3px; /* Hauteur de la ligne */
+    background-color:orange; /* Couleur de la ligne */
+    margin: 10px auto; /* Marge automatique (centrage horizontal) et espacement avant et après la ligne */
+}
+
+.tarif-txt{
+
+    background-color: var(--couleur-body1);
+    padding-top: 5px;
+    padding-bottom:5px
+}
+
+.tarif-txt2{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.tarif-txt3{
+    background-color: var(--couleur-body1);
+    padding-top: 5px;
+    padding-bottom:5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.prestation-txt2{
+    background-color: var(--couleur-body1);
+    padding-top: 8px;
+    padding-bottom:8px
+
+}
+
+.btn-devis{
+    width: 75%;
+    height:40px;
+   
+    background-color: orange;
+    color: white;
+    margin: auto;
+    margin-bottom: 25px;
+    font-size: 1em;
+    transition: transform 0.6s ease; /* Transition fluide pour l'effet agrandi */
+}
+
+.btn-devis:hover{
+    background-color: var(--couleur-body1);
+    transform: scale(1.1); /* Augmente légèrement la taille de l'image au survol */
+
+    cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+
+    .prestation-txt1{
+       font-size: 0.9rem;
+    }
+    .prestation-txt2{
+        font-size: 0.9rem;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+
+    
+    .tarifs-item{
+    
+        width: 40%;
+        margin-bottom: 20px;
+
+    }
+
+}
+@media (max-width: 650px) {
+
+    .prestation-txt1{
+        font-size: 0.8rem;
+     }
+     .prestation-txt2{
+         font-size: 0.8rem;
+     }
+}
+
+@media (max-width: 480px) {
+
+
+    .tarifs-item{
+     
+        width: 80%;
+    }
+    .prestation-txt1{
+        font-size: 0.9rem;
+     }
+     .prestation-txt2{
+         font-size: 0.9rem;
+     }
+}
+
+
