@@ -18,6 +18,7 @@
         // Récupérer les métadonnées
                 $theme_projet = get_post_meta(get_the_ID(), 'theme_projet', true);
                 $description_projet = get_post_meta(get_the_ID(), 'description_projet', true);
+                $lien_projet=get_post_meta(get_the_ID(), 'lien_git', true);
 
     ?>
             <div class="projet-content">
@@ -26,7 +27,8 @@
                     'class' => 'img-projet',
                     'data-nom-projet' => esc_attr($nom_projet),
                     'data-theme-projet' => esc_attr($theme_projet),
-                    'data-description-projet' => esc_attr($description_projet)
+                    'data-description-projet' => esc_attr($description_projet),
+                    'data-lien-projet' => esc_attr($lien_projet)
                 ]); ?>
             </div>
                         

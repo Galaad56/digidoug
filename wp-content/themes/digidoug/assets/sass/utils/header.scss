@@ -59,11 +59,19 @@ font-family: "space mono";
 .menu-box{
 display: flex;
 flex-direction: row;
-//position:fixed;
+position:fixed;
 justify-content:space-between;
 width: 80%;
 height: 120px;
-margin:auto;
+//margin:auto;
+left: 0;
+right: 0;
+margin-top: 0px;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(48, 48, 48, 0.8); /* Noir avec 80% d'opacité */
+z-index: 998;
+
 
 &__logo{
   width: 8%;

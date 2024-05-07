@@ -44,3 +44,5 @@ function resetMenu() {
     bar3.classList.add('bar3--remove');
     compteur = true;
   }
+
+  
