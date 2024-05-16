@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<title>DigiDoug</title>
+<!-- <title>DigiDoug</title> -->
 
     <?php wp_head(); ?>
   </head>

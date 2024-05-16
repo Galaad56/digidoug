@@ -29,3 +29,9 @@ function mytheme_register_nav_menu(){
 add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
 
 
+//seopress
+
+function seopress_theme_slug_setup() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'seopress_theme_slug_setup' );

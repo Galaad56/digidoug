@@ -6,6 +6,8 @@
                     $args = array(
                         'post_type' => 'projet',
                         'posts_per_page' => 4,
+                        'orderby' => 'date', // Tri par date de publication
+                        'order' => 'ASC' // Ordre descendant (du plus récent au plus ancien)
 
                     );
                     $projet_query = new WP_Query($args);

@@ -23,7 +23,7 @@
             var modalContent = document.querySelector('.modal-content');
             modalContent.innerHTML = '<h3>' + nomProjet + '</h3>' +
                                      '<p><strong>Thème:</strong> ' + themeProjet + '</p>' +
-                                     '<p><strong>Description:</strong> ' + descriptionProjet + '</p>'+
+                                     '<p><strong>Description:</strong> ' + descriptionProjet.replace(/\n/g, "<br>") + '</p>'+
                                      '<p><strong> <a href="' + lienProjet + '" target="_blank" rel="noopener noreferrer">Lien GitHub</a></strong></p>';
 
             var modal = document.querySelector('.modal');

@@ -50,6 +50,7 @@ to {
 body{
 background-color:#303030 ;  
 
+
 //background: linear-gradient(45deg,var(--couleur-body1),var(--couleur-body2) );
 font-family: "space mono";
 
@@ -63,12 +64,14 @@ position:fixed;
 justify-content:space-between;
 width: 80%;
 height: 120px;
+
 //margin:auto;
-left: 0;
-right: 0;
+top:0;
+left: 50%;
+transform: translateX(-50%);
 margin-top: 0px;
-margin-left: auto;
-margin-right: auto;
+//margin-left: auto;
+//margin-right: auto;
 background-color: rgba(48, 48, 48, 0.8); /* Noir avec 80% d'opacité */
 z-index: 998;
 
